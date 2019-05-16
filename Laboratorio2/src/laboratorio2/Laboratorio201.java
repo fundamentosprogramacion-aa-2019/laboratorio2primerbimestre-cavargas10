@@ -44,7 +44,7 @@ public class Laboratorio201 {
             System.out.printf("Ingrese los Nombres: ");
             nombres = entrada.nextLine();
 
-            System.out.println("Si desea terminar, digite 'n' ");
+            System.out.println("Si desea terminar, digite 'n': ");
             valorUsuario = entrada.nextLine();
 
             if (valorUsuario.equals("n")) {
@@ -56,7 +56,7 @@ public class Laboratorio201 {
 
             entrada.nextLine();
 
-            System.out.println("Si desea terminar, digite 'n' ");
+            System.out.println("Si desea terminar, digite 'n': ");
             valorUsuario = entrada.nextLine();
 
             if (valorUsuario.equals("n")) {
@@ -68,7 +68,7 @@ public class Laboratorio201 {
 
             entrada.nextLine();
 
-            System.out.println("Si desea terminar, digite 'n' ");
+            System.out.println("Si desea terminar, digite 'n': ");
             valorUsuario = entrada.nextLine();
 
             if (valorUsuario.equals("n")) {
@@ -80,7 +80,7 @@ public class Laboratorio201 {
 
             entrada.nextLine();
 
-            System.out.println("Si desea terminar, digite 'n' ");
+            System.out.println("Si desea terminar, digite 'n': ");
             valorUsuario = entrada.nextLine();
 
             cadena = String.format("%s* Nombres: %s, Edad: %d , Sueldo "
@@ -215,6 +215,10 @@ public class Laboratorio201 {
                             + "Seguro Social. \n");
                     descuentoSS = 35;
                 }
+            }else{
+                System.out.printf("Algun valor es erroneo: "
+                        + "Vuelva a intentarlo\n");
+                System.exit(0);
             }
 
             incentivoTotal = (double) (incentivoTotal + incentivo);
@@ -230,7 +234,7 @@ public class Laboratorio201 {
                     + "Total a Pagar: %.2f\n", cadena, descuentoSS,
                     totalPagarE);
 
-            System.out.printf("Si desea terminar, digite 'n' ");
+            System.out.printf("Si desea terminar, digite 'n': ");
             valorUsuario = entrada.nextLine();
 
             if (valorUsuario.equals("n")) {
@@ -245,10 +249,12 @@ public class Laboratorio201 {
 
         totalPagarT = (double) (sueldoMensualT - descuentoSSTotal);
 
-        cadena = String.format("%s\nDescuento de Seguro Social: %.2f\n"
-                + "Total Incentivo: %.2f\nTotal Pago por Hijos: %d\n"
-                + "Total Pago de la Empresa: %.2f\n", cadena, descuentoSSTotal,
-                incentivoTotal, bonoHijosTotal, totalPagarT);
+        
+        cadena = String.format("%s\nREPORTE ROL DE PAGOS (TOTALES)\n"
+                + "* Descuento de Seguro Social: %.2f\n"
+                + "* Total Incentivo: %.2f\n* Total Pago por Hijos: %d\n"
+                + "* Total Pago de la Empresa: %.2f\n", cadena, 
+                descuentoSSTotal, incentivoTotal, bonoHijosTotal, totalPagarT);
         System.out.printf("%s", cadena);
     }
 }
