@@ -18,11 +18,6 @@ public class Laboratorio201 {
         
         String cadena = "";
         String nombres = "";
-        double sueldoMensualT = 0;
-        int bonoHijosTotal = 0;
-        double incentivoTotal = 0;
-        double descuentoSSTotal = 0;
-        double totalPagarT = 0;
         int edad = 0;
         double sueldoMensual;
         double incentivo = 0;
@@ -30,6 +25,11 @@ public class Laboratorio201 {
         int bonoHijos = 0;
         double descuentoSS = 0;
         double totalPagarE = 0;
+        double sueldoMensualT = 0;
+        int bonoHijosTotal = 0;
+        double incentivoTotal = 0;
+        double descuentoSSTotal = 0;
+        double totalPagarT = 0;
         boolean bandera = true;
         int contador = 0;
         String valorUsuario = "";
