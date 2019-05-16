@@ -35,7 +35,7 @@ public class Laboratorio201 {
         do{ 
             
             contador = contador + 1;
-            System.out.printf("Ingrese sus nombres: ");
+            System.out.printf("Ingrese los Nombres: ");
             nombres = entrada.nextLine();
             
             System.out.println("Si desea terminar, digite 'n' ");
@@ -45,7 +45,7 @@ public class Laboratorio201 {
                 bandera = false;
             }
                 
-            System.out.printf("Ingrese su edad: ");
+            System.out.printf("Ingrese la Edad: ");
             edad = entrada.nextInt();
             
             entrada.nextLine(); 
@@ -57,7 +57,7 @@ public class Laboratorio201 {
                 bandera = false;
             }
                                    
-            System.out.printf("Ingrese su Sueldo Mensual: ");
+            System.out.printf("Ingrese el Sueldo Mensual: ");
             sueldoMensual = entrada.nextInt();
             
             entrada.nextLine();
@@ -77,7 +77,7 @@ public class Laboratorio201 {
             System.out.println("Si desea terminar, digite 'n' ");
             valorUsuario = entrada.nextLine();
             
-            cadena = String.format("%sNombres: %s, Edad: %d , Sueldo" 
+            cadena = String.format("%sNombres: %s, Edad: %d , Sueldo " 
                     + "Mensual: %.2f , Cantidad de Hijos: %d\n", cadena, 
                     nombres, edad, sueldoMensual, hijos);
                                    
@@ -87,126 +87,126 @@ public class Laboratorio201 {
             
             if(sueldoMensual == 340){
                 
-                System.out.printf("Usted es un Empleado TIPO 1. \n");
-                System.out.println("* Usted recibe un incentivo del 5%, "
-                        + "por concepto de edad.");
+                System.out.printf("Es un Empleado TIPO 1. \n");
+                System.out.println("* Obtiene un incentivo del 5%, por "
+                        + "concepto de edad.");
                 incentivo = (double) (sueldoMensual * 0.05);
                                 
                 if(hijos > 0){
-                    System.out.printf("* Usted recibe un bono adicional, por"
+                    System.out.printf("* Obtiene un bono adicional, por"
                             + " el concepto de hijos. \n");
                     bonoHijos = hijos * 10;
                 }else{
-                    System.out.printf("* Usted no obtiene bono adicional por el "
+                    System.out.printf("* No Obtiene bono adicional por el "
                             + "concepto hijos.\n");
                 }
                 
                 sueldoMensual = incentivo + bonoHijos + sueldoMensual;
                 
                 if(edad <= 20){
-                    System.out.printf("* Usted Obtendra un Descuento por el "
-                            + "concepto Seguro Social. \n");
+                    System.out.printf("* Obtiene Descuento por el concepto "
+                            + "Seguro Social. \n");
                     descuentoSS = 15;
                 }else if (edad > 20 && edad <= 30){
-                    System.out.printf("* Usted Obtendra un Descuento por el "
-                            + "concepto Seguro Social. \n");
+                    System.out.printf("* Obtiene Descuento por el concepto "
+                            + "Seguro Social. \n");
                     descuentoSS = 25;                    
                 }else if (edad > 31) {
-                    System.out.printf("* Usted Obtendra un Descuento por el "
-                            + "concepto Seguro Social. \n");
+                    System.out.printf("* Obtiene Descuento por el concepto "
+                            + "Seguro Social. \n");
                     descuentoSS = 35;
                 }
                                                
             }else if (sueldoMensual == 460){
-                System.out.printf("Usted es un Empleado TIPO 2. \n");
-                System.out.println("* Usted recibe un incentivo del 5%,"
-                        + " por concepto de edad.");
+                System.out.printf("Es un Empleado TIPO 2. \n");
+                System.out.println("* Obtiene un incentivo del 5%, por "
+                        + "concepto de edad.");
                 incentivo = (double) (sueldoMensual * 0.10);
                 
                 if(hijos > 0){
-                    System.out.printf("* Usted recibe un bono adicional, por"
+                    System.out.printf("* Obtiene un bono adicional, por"
                             + " el concepto de hijos.\n");
                     bonoHijos = hijos * 10;
                 }else{
-                    System.out.printf("* Usted no obtiene bono adicional por el"
+                    System.out.printf("* No Obtiene bono adicional por el"
                             + " concepto hijos.\n");
                 }
                 
                 sueldoMensual = incentivo + bonoHijos + sueldoMensual;
                 
                 if(edad <= 20){
-                    System.out.printf("* Usted Obtendra un Descuento por el "
-                            + "concepto Seguro Social. \n");
+                    System.out.printf("* Obtiene Descuento por el concepto "
+                            + "Seguro Social. \n");
                     descuentoSS = 15;
                 }else if (edad > 20 && edad <= 30){
-                    System.out.printf("* Usted Obtendra un Descuento por el "
-                            + "concepto Seguro Social. \n");
+                    System.out.printf("* Obtiene Descuento por el concepto "
+                            + "Seguro Social. \n");
                     descuentoSS = 25;                    
                 }else if (edad > 31) {
-                    System.out.printf("* Usted Obtendra un Descuento por el "
-                            + "concepto Seguro Social. \n");
+                    System.out.printf("* Obtiene Descuento por el concepto "
+                            + "Seguro Social. \n");
                     descuentoSS = 35;
                 }
                             
             }else if (sueldoMensual == 580){
-                System.out.printf("Usted es un Empleado TIPO 3. \n");
-                System.out.println("* Usted recibe un incentivo del 5%,"
+                System.out.printf("Es un Empleado TIPO 3. \n");
+                System.out.println("* Obtiene un incentivo del 5%,"
                         + " por concepto de edad.");
                 incentivo = (double) (sueldoMensual * 0.15);
                 
                 if(hijos > 0){
-                    System.out.printf("* Usted recibe un bono adicional, por"
+                    System.out.printf("* Obtiene un bono adicional, por"
                             + " el concepto de hijos.\n");
                     bonoHijos = hijos * 10;
                 }else{
-                    System.out.printf("* Usted no obtiene bono adicional por el"
+                    System.out.printf("* No Obtiene bono adicional por el"
                             + "concepto hijos.\n");
                 }
                 
                 sueldoMensual = incentivo + bonoHijos + sueldoMensual;
                 
                 if(edad <= 20){
-                    System.out.printf("* Usted Obtendra un Descuento por el "
-                            + "concepto Seguro Social. \n");
+                    System.out.printf("* Obtiene Descuento por el concepto "
+                            + "Seguro Social. \n");
                     descuentoSS = 15;
                 }else if (edad > 20 && edad <= 30){
-                    System.out.printf("* Usted Obtendra un Descuento por el "
-                            + "concepto Seguro Social. \n");
+                    System.out.printf("* Obtiene Descuento por el concepto "
+                            + "Seguro Social. \n");
                     descuentoSS = 25;                    
                 }else if (edad > 31) {
-                    System.out.printf("* Usted Obtendra un Descuento por el "
-                            + "concepto Seguro Social. \n");
+                    System.out.printf("* Obtiene Descuento por el concepto "
+                            + "Seguro Social. \n");
                     descuentoSS = 35;
                 }
             
             }else if (sueldoMensual == 600){
-                System.out.printf("Usted es un Empleado TIPO 4. \n");
-                System.out.println("* Usted recibe un incentivo del 5%,"
-                        + "por concepto de edad.");
+                System.out.printf("Es un Empleado TIPO 4. \n");
+                System.out.println("* Obtiene un incentivo del 5%, por "
+                        + "concepto de edad.");
                 incentivo = (double) (sueldoMensual * 0.15);
                 
                 if(hijos > 0){
-                    System.out.printf("* Usted recibe un bono adicional, por"
+                    System.out.printf("* Obtiene un bono adicional, por"
                             + " el concepto de hijos.\n");
                     bonoHijos = hijos * 10;
                 }else{
-                    System.out.printf("Usted no obtiene bono adicional por el "
+                    System.out.printf("* No Obtiene bono adicional por el "
                             + "concepto hijos.\n");
                 }
                 
                 sueldoMensual = incentivo + bonoHijos + sueldoMensual;
                 
                 if(edad <= 20){
-                    System.out.printf("* Usted Obtendra un Descuento por el "
-                            + "concepto Seguro Social. \n");
+                    System.out.printf("* Obtiene Descuento por el concepto "
+                            + "Seguro Social. \n");
                     descuentoSS = 15;
                 }else if (edad > 20 && edad <= 30){
-                    System.out.printf("* Usted Obtendra un Descuento por el "
-                            + "concepto Seguro Social. \n");
+                    System.out.printf("* Obtiene Descuento por el concepto "
+                            + "Seguro Social. \n");
                     descuentoSS = 25;                    
                 }else if (edad > 31) {
-                    System.out.printf("* Usted Obtendra un Descuento por el "
-                            + "concepto Seguro Social. \n");
+                    System.out.printf("* Obtiene Descuento por el concepto "
+                            + "Seguro Social. \n");
                     descuentoSS = 35;
                 }
             }
@@ -228,6 +228,7 @@ public class Laboratorio201 {
                 + "Total Incentivo: %.2f\nTotal Pago por Hijos: %d\n"
                 + "Total Pago de la Empresa: %.2f\n", cadena, descuentoSS, 
                 incentivo, bonoHijos, totalPagar);
-        System.out.printf("%s", cadena);
+        System.out.printf("Reporte de Rol de Pagos de la Empresa (Totales) "
+                + "\n%s", cadena);
     }
 }
