@@ -18,13 +18,18 @@ public class Laboratorio201 {
         
         String cadena = "";
         String nombres = "";
+        double sueldoMensualT = 0;
+        int bonoHijosTotal = 0;
+        double incentivoTotal = 0;
+        double descuentoSSTotal = 0;
+        double totalPagarT = 0;
         int edad = 0;
         double sueldoMensual;
         double incentivo = 0;
         int hijos = 0;
         int bonoHijos = 0;
         double descuentoSS = 0;
-        double totalPagar = 0;
+        double totalPagarE = 0;
         boolean bandera = true;
         int contador = 0;
         String valorUsuario = "";
@@ -211,6 +216,12 @@ public class Laboratorio201 {
                 }
             }
             
+            incentivoTotal = (double) (incentivoTotal + incentivo);
+            bonoHijosTotal = bonoHijosTotal + bonoHijos;
+            sueldoMensualT = (double) (sueldoMensualT + sueldoMensual);
+            descuentoSSTotal = (double) (descuentoSSTotal + descuentoSS);
+                        
+            
             System.out.printf("Si desea terminar, digite 'n' ");
             valorUsuario = entrada.nextLine();
             
@@ -219,16 +230,17 @@ public class Laboratorio201 {
             }
                 
         }while (bandera == true) ;
-        
-        totalPagar = (double) (sueldoMensual - descuentoSS);
+                
+        totalPagarE = (double) (sueldoMensual - descuentoSS);
         
         entrada.nextLine();
         
+        totalPagarT = (double) (sueldoMensualT - descuentoSSTotal);
+        
         cadena = String.format("%s\nDescuento de Seguro social: %.2f\n"
                 + "Total Incentivo: %.2f\nTotal Pago por Hijos: %d\n"
-                + "Total Pago de la Empresa: %.2f\n", cadena, descuentoSS, 
-                incentivo, bonoHijos, totalPagar);
-        System.out.printf("Reporte de Rol de Pagos de la Empresa (Totales) "
-                + "\n%s", cadena);
+                + "Total Pago de la Empresa: %.2f\n", cadena, descuentoSSTotal, 
+                incentivoTotal, bonoHijosTotal, totalPagarT);
+        System.out.printf("%s", cadena);
     }
 }
