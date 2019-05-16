@@ -41,9 +41,9 @@ public class Laboratorio201 {
             System.out.println("Si desea terminar, digite 'n' ");
             valorUsuario = entrada.nextLine();
             
-                if (valorUsuario.equals("n")){
+            if (valorUsuario.equals("n")){
                 bandera = false;
-                }
+            }
                 
             System.out.printf("Ingrese su edad: ");
             edad = entrada.nextInt();
@@ -53,9 +53,9 @@ public class Laboratorio201 {
             System.out.println("Si desea terminar, digite 'n' ");
             valorUsuario = entrada.nextLine();
             
-                if (valorUsuario.equals("n")){
+            if (valorUsuario.equals("n")){
                 bandera = false;
-                }
+            }
                                    
             System.out.printf("Ingrese su Sueldo Mensual: ");
             sueldoMensual = entrada.nextInt();
@@ -65,9 +65,9 @@ public class Laboratorio201 {
             System.out.println("Si desea terminar, digite 'n' ");
             valorUsuario = entrada.nextLine();
             
-                if (valorUsuario.equals("n")){
+            if (valorUsuario.equals("n")){
                 bandera = false;
-                }
+            }
             
             System.out.printf("Ingrese la cantidad de Hijos: ");
             hijos = entrada.nextInt();
@@ -81,9 +81,9 @@ public class Laboratorio201 {
                     + "Mensual: %.2f , Cantidad de Hijos: %d\n", cadena, 
                     nombres, edad, sueldoMensual, hijos);
                                    
-                if (valorUsuario.equals("n")){
+            if (valorUsuario.equals("n")){
                 bandera = false;
-                }
+            }
             
             if(sueldoMensual == 340){
                 
