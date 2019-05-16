@@ -82,7 +82,7 @@ public class Laboratorio201 {
             System.out.println("Si desea terminar, digite 'n' ");
             valorUsuario = entrada.nextLine();
             
-            cadena = String.format("%sNombres: %s, Edad: %d , Sueldo " 
+            cadena = String.format("%s* Nombres: %s, Edad: %d , Sueldo " 
                     + "Mensual: %.2f , Cantidad de Hijos: %d\n", cadena, 
                     nombres, edad, sueldoMensual, hijos);
                                    
@@ -215,12 +215,19 @@ public class Laboratorio201 {
                     descuentoSS = 35;
                 }
             }
-            
+                        
             incentivoTotal = (double) (incentivoTotal + incentivo);
             bonoHijosTotal = bonoHijosTotal + bonoHijos;
             sueldoMensualT = (double) (sueldoMensualT + sueldoMensual);
             descuentoSSTotal = (double) (descuentoSSTotal + descuentoSS);
                         
+            totalPagarE = (double) (sueldoMensual - descuentoSS);
+        
+            entrada.nextLine();
+            
+            cadena = String.format("%sDescuento Seguro Social: %.2f, "
+                    + "Total a Pagar: %.2f\n", cadena, descuentoSS, 
+                    totalPagarE);
             
             System.out.printf("Si desea terminar, digite 'n' ");
             valorUsuario = entrada.nextLine();
@@ -234,10 +241,10 @@ public class Laboratorio201 {
         totalPagarE = (double) (sueldoMensual - descuentoSS);
         
         entrada.nextLine();
-        
+                       
         totalPagarT = (double) (sueldoMensualT - descuentoSSTotal);
         
-        cadena = String.format("%s\nDescuento de Seguro social: %.2f\n"
+        cadena = String.format("%s\nDescuento de Seguro Social: %.2f\n"
                 + "Total Incentivo: %.2f\nTotal Pago por Hijos: %d\n"
                 + "Total Pago de la Empresa: %.2f\n", cadena, descuentoSSTotal, 
                 incentivoTotal, bonoHijosTotal, totalPagarT);
