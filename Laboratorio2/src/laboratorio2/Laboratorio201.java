@@ -44,44 +44,22 @@ public class Laboratorio201 {
             System.out.printf("Ingrese los Nombres: ");
             nombres = entrada.nextLine();
 
-            System.out.println("Si desea terminar, digite 'n': ");
-            valorUsuario = entrada.nextLine();
-
-            if (valorUsuario.equals("n")) {
-                bandera = false;
-            }
+            entrada.nextLine();
 
             System.out.printf("Ingrese la Edad: ");
             edad = entrada.nextInt();
 
             entrada.nextLine();
 
-            System.out.println("Si desea terminar, digite 'n': ");
-            valorUsuario = entrada.nextLine();
-
-            if (valorUsuario.equals("n")) {
-                bandera = false;
-            }
-
             System.out.printf("Ingrese el Sueldo Mensual: ");
             sueldoMensual = entrada.nextInt();
 
             entrada.nextLine();
 
-            System.out.println("Si desea terminar, digite 'n': ");
-            valorUsuario = entrada.nextLine();
-
-            if (valorUsuario.equals("n")) {
-                bandera = false;
-            }
-
             System.out.printf("Ingrese la cantidad de Hijos: ");
             hijos = entrada.nextInt();
 
             entrada.nextLine();
-
-            System.out.println("Si desea terminar, digite 'n': ");
-            valorUsuario = entrada.nextLine();
 
             cadena = String.format("%s* Nombres: %s, Edad: %d , Sueldo "
                     + "Mensual: %.2f , Cantidad de Hijos: %d\n", cadena,
@@ -215,7 +193,7 @@ public class Laboratorio201 {
                             + "Seguro Social. \n");
                     descuentoSS = 35;
                 }
-            }else{
+            } else {
                 System.out.printf("Algun valor es erroneo: "
                         + "Vuelva a intentarlo\n");
                 System.exit(0);
@@ -249,11 +227,10 @@ public class Laboratorio201 {
 
         totalPagarT = (double) (sueldoMensualT - descuentoSSTotal);
 
-        
         cadena = String.format("%s\nREPORTE ROL DE PAGOS (TOTALES)\n"
                 + "* Descuento de Seguro Social: %.2f\n"
                 + "* Total Incentivo: %.2f\n* Total Pago por Hijos: %d\n"
-                + "* Total Pago de la Empresa: %.2f\n", cadena, 
+                + "* Total Pago de la Empresa: %.2f\n", cadena,
                 descuentoSSTotal, incentivoTotal, bonoHijosTotal, totalPagarT);
         System.out.printf("%s", cadena);
     }
